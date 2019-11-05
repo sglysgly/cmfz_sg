@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baizhi.dao.StarDao">
+    <select id="selectByPage" resultType="Star">
+        select id,nickname,name,sex,bir,photo from star limit #{start},#{rows}
+    </select>
+    <insert id="insert" parameterType="Star">
+        insert into star values(#{id},#{nickname},#{name},#{sex},#{bir},#{photo})
+    </insert>
+    <update id="update" parameterType="Star">
+        update star
+        <set>
+            <if test="photo!=null">photo=#{photo},</if>
+            <if test="bir!=null">bir=#{bir},</if>
+            <if test="nickname!=null">nickname=#{nickname},</if>
+            <if test="name!=null">name=#{name},</if>
+            <if test="sex!=null">sex=#{sex},</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="selectTotalCounts" resultType="Integer">
+        select count(*) from star
+    </select>
+
+    <select id="selectById" resultType="Star">
+        select * from star where id=#{id}
+    </select>
+
+    <delete id="delete" parameterType="String">
+        delete from star where id=#{id}
+    </delete>
+
+    <select id="selectAll" resultType="Star">
+         select id,nickname,name,sex,bir,photo from star
+    </select>
+</mapper>
