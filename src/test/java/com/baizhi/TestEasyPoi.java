@@ -15,7 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -31,7 +34,7 @@ public class TestEasyPoi {
         Student stu1 = new Student("1","小可爱",16,new Date());
         Student stu2 = new Student("2","小蛋黄",16,new Date());
         Student stu3 = new Student("3","小狗蛋",12,new Date());
-        Student stu4 = new Student("4","小嘿嘿",10,new Date());
+        Student stu4 = new Student("4", "小哈哈哈", 10, new Date());
         Student stu5 = new Student("5","小小小",23,new Date());
 
         List<Student> students = Arrays.asList(stu1, stu2, stu3, stu4, stu5);
