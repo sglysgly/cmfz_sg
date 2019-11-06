@@ -1,7 +1,7 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddRedisCache;
 import com.baizhi.dao.UserDao;
-import com.baizhi.entity.Star;
 import com.baizhi.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @AddRedisCache
     public HashMap<String, Object> query(Integer page, Integer rows, String id) {
         HashMap<String, Object> map = new HashMap<>();
         Integer start = (page - 1) * rows;

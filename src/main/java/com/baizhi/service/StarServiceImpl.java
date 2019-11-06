@@ -1,5 +1,6 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddRedisCache;
 import com.baizhi.dao.StarDao;
 import com.baizhi.entity.Star;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,8 @@ public class StarServiceImpl implements StarService {
     private StarDao starDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public HashMap<String, Object> queyByPage(Integer pager, Integer rows) {
+    @AddRedisCache
+    public HashMap<String, Object> queryByPage(Integer pager, Integer rows) {
         HashMap<String, Object> map = new HashMap<>();
         Integer start = (pager - 1) * rows;
         //rows

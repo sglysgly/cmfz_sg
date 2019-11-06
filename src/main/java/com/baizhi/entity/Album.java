@@ -6,11 +6,12 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 @Data
 @NoArgsConstructor
 @Accessors(chain = true)
-public class Album {
+public class Album implements Serializable {
     private String id;
     private String title;
     private String author;

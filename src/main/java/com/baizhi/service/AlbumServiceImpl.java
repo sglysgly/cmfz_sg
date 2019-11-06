@@ -1,10 +1,9 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddRedisCache;
 import com.baizhi.dao.AlbumDao;
 import com.baizhi.dao.StarDao;
 import com.baizhi.entity.Album;
-import com.baizhi.entity.Star;
-import lombok.experimental.Accessors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -24,6 +23,7 @@ public class AlbumServiceImpl implements AlbumService {
     private StarDao starDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @AddRedisCache
     public HashMap<String, Object> queryByPage(Integer page, Integer rows) {
         HashMap<String, Object> map = new HashMap<>();
         Integer start = (page - 1) * rows;

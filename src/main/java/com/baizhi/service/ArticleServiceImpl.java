@@ -1,5 +1,6 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddRedisCache;
 import com.baizhi.dao.ArticleDao;
 import com.baizhi.entity.Article;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleDao articleDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @AddRedisCache
     public HashMap<String, Object> queryByPage(Integer page, Integer rows) {
         HashMap<String, Object> map = new HashMap<>();
         Integer start = (page-1)*rows;

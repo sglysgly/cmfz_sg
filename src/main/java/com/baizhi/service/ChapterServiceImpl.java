@@ -1,5 +1,6 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddRedisCache;
 import com.baizhi.dao.AlbumDao;
 import com.baizhi.dao.ChapterDao;
 import com.baizhi.entity.Album;
@@ -23,6 +24,7 @@ public class ChapterServiceImpl implements ChapterService {
     private AlbumDao albumDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @AddRedisCache
     public HashMap<String, Object> query(Integer page, Integer rows, String id) {
         HashMap<String, Object> map = new HashMap<>();
         Integer start  = (page-1)*rows;

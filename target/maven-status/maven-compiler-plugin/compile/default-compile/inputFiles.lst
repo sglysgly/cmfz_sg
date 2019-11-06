@@ -25,6 +25,7 @@ E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\AlbumServiceImpl.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\controller\BannerController.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\entity\Student.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\dao\StarDao.java
+E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\util\PhoneMessageUtil.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\ChapterService.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\dao\ArticleDao.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\UserServiceImpl.java
@@ -33,15 +34,18 @@ E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\entity\User.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\BannerService.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\StarService.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\dao\AlbumDao.java
+E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\annotation\AddRedisCache.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\entity\Statistic.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\StatisticService.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\entity\Article.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\dao\StatisticDao.java
+E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\cache\RedisCache.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\dao\UserDao.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\controller\ArticleController.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\dao\ChapterDao.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\entity\Album.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\CityService.java
+E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\controller\Test.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\service\ChapterServiceImpl.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\entity\Teacher.java
 E:\idea_sg\cmfz_sg\src\main\java\com\baizhi\controller\UserController.java

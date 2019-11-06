@@ -1,8 +1,8 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddRedisCache;
 import com.baizhi.dao.BannerDao;
 import com.baizhi.entity.Banner;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -20,6 +20,7 @@ public class BannerServiceImpl implements BannerService {
     private BannerDao bannerDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @AddRedisCache
     public HashMap<String, Object> queryByPage(Integer page, Integer rows) {
         HashMap<String, Object> map = new HashMap<>();
         Integer start = (page - 1) * rows;

@@ -1,6 +1,5 @@
 package com.baizhi.controller;
 
-import com.baizhi.entity.Banner;
 import com.baizhi.entity.Star;
 import com.baizhi.service.StarService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,7 @@ public class StarController {
     @ResponseBody
     @RequestMapping("show")
     public HashMap<String,Object> show(Integer page,Integer rows){
-        HashMap<String, Object> stars = starService.queyByPage(page, rows);
+        HashMap<String, Object> stars = starService.queryByPage(page, rows);
         return stars;
     }
 
